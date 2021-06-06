@@ -1,32 +1,38 @@
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
+let currentLocation = 'firstPage';
+let autoScrolling = false;
 
-let x1 = null;
-let y1 = null;
+let [firstHeight,secondHeight,thirdHeight] = [$('#firstPage').offset().top,
+ $('#secondPage').offset().top,
+ $('#thirdPage').offset().top];
 
-function handleTouchStart(event) {
-    const firstTouch = event.touches[0];
-    x1 = firstTouch.clientX;
-    y1 = firstTouch.clientY;
-}
-
-function handleTouchMove(event) {
-    if (!x1 || !y1){
-        return false;
+$(document).scroll(e => {
+    let scrolled = $(window).scrollTop();
+    // Если user поскроллил
+    if (!autoScrolling) {
+    	if (scrolled > 1 && currentLocation == 'firstPage') {
+            scrollPage(secondHeight, 'secondPage');
+        } else if (scrolled > secondHeight + 1 && currentLocation == 'secondPage') {
+            scrollPage(thirdHeight, 'thirdPage');
+        } else if (scrolled < thirdHeight - 1 && currentLocation == 'thirdPage') {
+            scrollPage(secondHeight, 'secondPage');
+        } else if (scrolled < secondHeight - 1 && currentLocation == 'secondPage') {
+            scrollPage(firstHeight, 'firstPage');
+        }
     }
-    let x2 = event.touches[0].clientX;
-    let y2 = event.touches[0].clientY;
-    let xDiff = x2 - x1;
-    let yDiff = y2 - y1;
 
-    if (Math.abs(xDiff) > Math.abs(yDiff)){
-        if (xDiff > 0) console.log('right');
-        else console.log('left');
+    function scrollPage(nextHeight, page){
+      currentLocation = page; autoScrolling = true;
+      $('body,html').animate({scrollTop:nextHeight}, 500, () => {
+          autoScrolling = false;
+      });
     }
-    else {
-        if (yDiff > 0) console.log('down');
-        else console.log('top');
-    }
-    x1 = null;
-    y1 = null;
-}
+})
+
+$(document).ready(function() {
+	$('.nav__button').click(function(event){
+		$('.nav__button, .nav_background, .svg1, .svg2, .nav__item_3, .nav__item_1, .rect2, body').toggleClass('active')
+	});
+    
+});
+
+

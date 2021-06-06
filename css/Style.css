@@ -1,0 +1,224 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Calibri;
+  font-style: normal;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+.article {
+  background: linear-gradient(5.86deg, #EA916B -3.26%, rgba(255, 255, 255, 0) 55.81%), linear-gradient(170.95deg, #EA916B 0%, #EA916B 0.01%, rgba(195, 64, 217, 0.5) 66.37%);
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.nav .nav__wrapper {
+  width: 100%;
+}
+.nav .nav__wrapper .nav__item_1 {
+  width: 100%;
+  bottom: 0px;
+  height: 77.5px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.nav .nav__wrapper .nav__item_1 .svg1 {
+  width: 100%;
+  left: 0;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+.nav .nav__wrapper .nav__item_1 .svg1.active {
+  bottom: 158.5px;
+}
+.nav .nav__wrapper .nav__item_1 .svg2 {
+  height: 163.5px;
+}
+.nav .nav__wrapper .nav__item_1 .rect2 {
+  height: 158.5px;
+}
+.nav .nav__wrapper .nav__item_1 .rect2.active {
+  height: 158.5px;
+}
+.nav .nav__wrapper .nav__item_1.active {
+  height: 235px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.nav .nav__wrapper .nav__item_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 0;
+}
+.nav .nav__wrapper .nav__item_2 .nav__button {
+  position: relative;
+  bottom: 41px;
+  border: 0;
+  padding: 0;
+  width: 30px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='15' viewBox='0 0 30 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='30' height='3' rx='1.5' fill='%23EA916B'/%3e%3crect y='6' width='30' height='3' rx='1.5' fill='%23EA916B'/%3e%3crect y='12' width='30' height='3' rx='1.5' fill='%23EA916B'/%3e%3c/svg%3e ");
+  background-position: 50% 50%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.nav .nav__wrapper .nav__item_2 .nav__button.active {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='20' viewBox='0 0 30 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='30' height='3' rx='1.5' fill='%23E57546'/%3e%3crect y='6' width='30' height='3' rx='1.5' fill='%23E57546'/%3e%3cpath d='M0 13.9528C0 12.9921 0.941183 12.3137 1.85258 12.6175L13.4189 16.473C14.4452 16.8151 15.5548 16.8151 16.5811 16.473L28.1474 12.6175C29.0588 12.3137 30 12.9921 30 13.9528C30 14.5743 29.5923 15.1223 28.997 15.3009L16.4367 19.069C15.4995 19.3501 14.5005 19.3501 13.5633 19.069L1.00305 15.3009C0.407705 15.1223 0 14.5743 0 13.9528Z' fill='%23E57546'/%3e%3c/svg%3e ");
+  background-position: 50% 50%;
+  height: 20px;
+  bottom: 195px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.nav .nav__wrapper .nav__item_3 {
+  z-index: 3;
+  height: 158px;
+  width: 100%;
+  position: absolute;
+  bottom: -158px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #19aab1;
+}
+.nav .nav__wrapper .nav__item_3 .item_3__wrapper {
+  padding-top: 9px;
+}
+.nav .nav__wrapper .nav__item_3 .item_3__wrapper .social_network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+.nav .nav__wrapper .nav__item_3.active {
+  bottom: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.nav .nav__wrapper .nav__item_3 p::before {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8A3976;
+  content: "<!-- You can contact me through: -->";
+}
+
+.page1 {
+  width: 100%;
+  position: absolute;
+}
+.page1 h1 {
+  margin-top: 14px;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.page1 h1 span {
+  font-weight: bold;
+}
+
+.page2 {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8A3976;
+  margin: 0 auto;
+  padding: 37px 0 0 0;
+  width: 83.3333333333%;
+}
+.page2 .item_info {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px 7px;
+}
+.page2 .item_position {
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px 5px 5px 5px;
+  padding: 3px 7px;
+}
+.page2 .item_position span {
+  font-weight: normal;
+}
+.page2 .item_position p:nth-child(2) {
+  font-size: 12px;
+  line-height: 15px;
+}
